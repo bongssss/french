@@ -2,6 +2,16 @@
   functions = "Functions"
   publish = "build"
 
+# Redirect rules
+[[redirects]]
+  from = "/result"
+  to = "/result.html"
+  status = 200
+
+[[redirects]]
+  from = "/error"
+  to = "/error.html"
+  status = 200
 
 [[redirects]]
   from = "/*"
