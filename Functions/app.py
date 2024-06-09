@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
+
 from deep_translator import GoogleTranslator
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 
 @app.route('/')
 def index():
@@ -24,7 +25,18 @@ def translate():
     except Exception as e:
         error_message = f"Error: {e}"
         return render_template('error.html', error_message=error_message)
+    
+@app.route('/result')
+def result():
+    # This route is for displaying the result.html template
+    # It's not explicitly called in the provided code but required for rendering the result template
+    return render_template('result.html')  # Provide a valid response
 
+@app.route('/error')
+def error():
+    # This route is for displaying the error.html template
+    # It's not explicitly called in the provided code but required for rendering the error template
+    return render_template('error.html')  # Provide a valid response
 
 @app.route('/<path:path>')
 def static_proxy(path):
