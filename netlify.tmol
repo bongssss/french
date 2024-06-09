@@ -4,7 +4,7 @@
 
 # Redirect rules
 [[redirects]]
-  from = "/result"
+  from = "/translate"
   to = "/result.html"
   status = 200
 
