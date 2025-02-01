@@ -5,4 +5,4 @@ Open your terminal or command prompt.
 
 Navigate to the directory where your app.py file is located.
 
-Run the following command:
+Run the following command: python app.py
